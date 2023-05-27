@@ -28,6 +28,6 @@ else:
         if qtd_notas[i] > 0:
             print(f"{qtd_notas[i]} nota(s) de R${nota},00")
 
-    for i, moeda in enumerate([0.50, 0.25, 0.10, 0.05]):
+    for i, moeda in enumerate([50, 25, 10, 5]):
         if qtd_moedas[i] > 0:
             print(f"{qtd_moedas[i]} moeda(s) de ¢{moeda}")
