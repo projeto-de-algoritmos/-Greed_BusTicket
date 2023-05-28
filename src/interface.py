@@ -60,7 +60,7 @@ janela = tk.Tk()
 janela.title("Catraca de Ônibus")
 
 # Carrega a imagem de fundo
-imagem = Image.open("catraca2.jpg")
+imagem = Image.open("bus.jpeg")
 imagem = imagem.resize((800, 800), Image.ANTIALIAS)  # Ajusta o tamanho da imagem
 imagem_de_fundo = ImageTk.PhotoImage(imagem)
 
