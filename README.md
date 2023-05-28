@@ -15,15 +15,15 @@ Programa que automatiza catracas de ônibus.
 ## Screenshots
 <center>Labirinto 1</center>
 
-![Labirinto 1](./assets/lab1.jpeg)
+![SITUAÇÃO 1](./assets/img1.jpeg)
 
 <center>Labirinto 2</center>
 
-![Labirinto 2](./assets/lab2.jpeg)
+![SITUAÇÃO 2](./assets/img2.jpeg)
 
 <center>Labirinto 3</center>
 
-![Labirinto 3](./assets/lab3.jpeg)
+![SITUAÇÃO 3](./assets/img3.jpeg)
 
 
 ## Instalação 
