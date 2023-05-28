@@ -1,7 +1,7 @@
 # Bus Ticket
 
 **Número da Lista**: 10<br>
-**Conteúdo da Disciplina**: Grafos2<br>
+**Conteúdo da Disciplina**: Greed<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -34,7 +34,7 @@ Necessário ter uma versão atualizada da linguagem Python (Preferência 3.10) e
 - pip install pillow
 
 ## Uso 
-Primeiro, use o terminal e use o comando "cd src", para entrar na pasta **src**. Aogra, rode o programa e insira valores maiores que o da passagem desejada e menores que o valot teto (R$50,00), feito isso, clique em "Pagar passagem" para ver a opção de troco com melhor otimização de notas.
+Primeiro, use o terminal e use o comando "cd src", para entrar na pasta **src**. Agora, execute o programa e insira valores maiores que o da passagem desejada e menores que o valot teto (R$50,00), feito isso, clique em "Pagar passagem" para ver a opção de troco com melhor otimização de notas.
 
 ## Outros 
 None
