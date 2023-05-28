@@ -28,11 +28,13 @@ Programa que automatiza catracas de ônibus.
 
 ## Instalação 
 **Linguagem**: Python<br>
-**Framework**: Pygame e Numpy<br>
-Necessário ter uma versão atualizada da linguagem Python (Preferência 3.10) e, além disso, instalar o framework Pygame e Numpy (Use o comando: pip install). 
+**Framework**: Tkinter e Pillow<br>
+Necessário ter uma versão atualizada da linguagem Python (Preferência 3.10) e, além disso, instalar o framework tk e pillow (Use o comando: pip install). 
+- pip install tk
+- pip install pillow
 
 ## Uso 
-Basta dar run no código para que seja possível gerar um novo mapa aleatório.
+Primeiro, use o terminal e use o comando "cd src", para entrar na pasta **src**. Aogra, rode o programa e insira valores maiores que o da passagem desejada e menores que o valot teto (R$50,00), feito isso, clique em "Pagar passagem" para ver a opção de troco com melhor otimização de notas.
 
 ## Outros 
 None
