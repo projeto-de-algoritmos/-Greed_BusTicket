@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import ImageTk, Image
 
 def dar_troco(valor_passagem, dinheiro):
     troco = dinheiro - valor_passagem
@@ -25,9 +26,7 @@ def pagar_passagem():
     if dinheiro > 50:
         resultado.configure(text="Valor inválido. A catraca não aceita notas maiores que R$50,00.")
         return
-    elif dinheiro < 0:
-        resultado.configure(text="Valor inválido.")
-        return
+    
 
     if opcao.get() == 1:
         valor_passagem = 2.70
@@ -39,6 +38,10 @@ def pagar_passagem():
         resultado.configure(text="Opção inválida.")
         return
 
+    if dinheiro < valor_passagem:
+        resultado.configure(text="Valor inválido.")
+        return
+    
     qtd_notas, qtd_moedas = dar_troco(valor_passagem, dinheiro)
 
     troco_text = "Troco otimizado:\n"
@@ -56,30 +59,46 @@ def pagar_passagem():
 janela = tk.Tk()
 janela.title("Catraca de Ônibus")
 
+# Carrega a imagem de fundo
+imagem = Image.open("catraca2.jpg")
+imagem = imagem.resize((800, 800), Image.ANTIALIAS)  # Ajusta o tamanho da imagem
+imagem_de_fundo = ImageTk.PhotoImage(imagem)
+
+# Cria um Label com a imagem de fundo
+label_imagem = tk.Label(janela, image=imagem_de_fundo)
+label_imagem.place(x=0, y=0, relwidth=1, relheight=1)  # Posiciona e dimensiona o Label para ocupar toda a janela
+
 # Cria os componentes da interface
 label_valor = tk.Label(janela, text="Digite o valor para pagar a passagem (até R$50,00):")
-label_valor.pack()
+label_valor.pack(anchor="center")
 
 entry_dinheiro = tk.Entry(janela)
-entry_dinheiro.pack()
+entry_dinheiro.pack(anchor="center")
 
 opcao = tk.IntVar()
 opcao.set(1)
 
 radio_urbana = tk.Radiobutton(janela, text="Passagem Urbana (R$2.70)", variable=opcao, value=1)
-radio_urbana.pack()
+radio_urbana.pack(anchor="center")
 
 radio_metropolitana1 = tk.Radiobutton(janela, text="Passagem Metropolitana 1 (R$3.80)", variable=opcao, value=2)
-radio_metropolitana1.pack()
+radio_metropolitana1.pack(anchor="center")
 
 radio_metropolitana2 = tk.Radiobutton(janela, text="Passagem Metropolitana 2 (R$5.50)", variable=opcao, value=3)
-radio_metropolitana2.pack()
+radio_metropolitana2.pack(anchor="center")
 
 button_calcular = tk.Button(janela, text="Pagar Passagem", command=pagar_passagem)
-button_calcular.pack()
+button_calcular.pack(anchor="center")
 
-resultado = tk.Label(janela, text="")
-resultado.pack()
+resultado = tk.Label(janela, text="", anchor="center")
+resultado.pack(anchor="center")
+
+# Define as dimensões da janela
+largura = 300
+altura = 300
+posicao_x = (janela.winfo_screenwidth() // 2) - (largura // 2)  # Centraliza horizontalmente
+posicao_y = (janela.winfo_screenheight() // 2) - (altura // 2)  # Centraliza verticalmente
+janela.geometry(f"{largura}x{altura}+{posicao_x}+{posicao_y}")
 
 # Inicia o loop principal da interface
 janela.mainloop()
